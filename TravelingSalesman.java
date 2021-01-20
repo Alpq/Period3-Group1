@@ -4,7 +4,7 @@ public class TravelingSalesman{
   public static void main(String[] args){
     ArrayList<String> cities = new ArrayList<String>(); //arraylist for cities
     ArrayList<String> cities2 = new ArrayList<String>();
-    int distances[][] = new int[8][8]; //is there an upper limit that we need to test?
+    int distances[][] = new int[9][9]; //is there an upper limit that we need to test?
     Scanner n = new Scanner(System.in);
     while (n.hasNext()){
       String line = n.nextLine();  //"Faerun to Norrath = 129"
