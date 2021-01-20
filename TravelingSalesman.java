@@ -3,8 +3,8 @@ import java.io.*;
 public class TravelingSalesman{
   public static void main(String[] args){
     ArrayList<String> cities = new ArrayList<String>(); //arraylist for starting cities
-    ArrayList<String> cities2 = new ArrayList<String>(); //arraylist for destination cities
-    int distances[][] = new int[9][9];
+    ArrayList<String> cities2 = new ArrayList<String>();//arraylist for destination cities
+    int distances[][] = new int[9][9]; //is there an upper limit that we need to test?
     Scanner n = new Scanner(System.in);
     while (n.hasNext()){
       String line = n.nextLine();  //"Faerun to Norrath = 129"
