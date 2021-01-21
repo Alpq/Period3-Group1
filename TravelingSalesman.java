@@ -27,6 +27,34 @@ public class TravelingSalesman{
     System.out.println(cities2.toString());*/
     //we can probably fit startingC and destinationC in the same 'cities' arraylist,
     //but idk if that messes up the order of the starting cities and such
+
+    int shortestPath = Integer.MAX_VALUE;
+    ArrayList<Integer> integerPaths = new ArrayList<Integer>();
+    for (int i = 0; i < cities.size() ; i++) {integerPaths.add(i);}
+    for (int i = 0; i < 6 * factorial(cities.size()) ; i ++)
+    {
+      Collections.shuffle(cities);
+      shortestPath = Math.min(shortestPath, totalDistance(integerPaths, distances));
+    }
+
+  }
+  public static int totalDistance(ArrayList<Integer> citys, int[][] distance)
+  {
+    int out = 0;
+    for (int i = 0; i < citys.size() - 1; i ++ )
+    {
+      out += distance[citys.get(i)][citys.get(i + 1)];
+    }
+    return out;
+  }
+  public static int factorial (int n)
+  {
+    int out = 1;
+    for (int i = 1;i <= n ; i ++ )
+    {
+      out = out * i;
+    }
+    return out;
   }
 }
 
