@@ -21,7 +21,7 @@ Number of possibilities = n!
 Number of lines given = n(n-1)/2, where n is the # of cities
 
 Each city will have a corresponding number.
-We can loop thorugh the array, skipping over nulls with if(point != null) and compare each distance to the previous shortest, then return the shortest.
+We can loop through the array, skipping over nulls with if(point != null) and compare each distance to the previous shortest, then return the shortest.
 
 We will need a Scanner to read the file containing the distances between cities.
 ********************
@@ -47,11 +47,9 @@ Possible steps for solving this problem:
 2. Create a 2d array with #cities x #cities dimensions.
 3. Assign each city a numerical value from 0->(# of cities).
 4. Based on the number of cities find the # of permutations needed to find the shortest distance.
-5. Loop x times{
-   
+5. Loop x times
    1. Shuffle a List with ints from 0->(# of cities).
    2. Iterate through list and find distances between each of the number.
    3. Check if this iteration has the shortest total distance (if so update new shortest distance).
-   }
 6. Output shortest distance.
 
