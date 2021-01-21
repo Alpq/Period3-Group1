@@ -22,6 +22,7 @@ public class Permutations{
         if (xChain.get(j+1) > xChain.get(j)) dist += matrix[xChain.get(j)][xChain.get(j+1)];
         else dist += matrix[xChain.get(j+1)][xChain.get(j)];
       }
+      //System.out.println(xChain.toString());
       if (dist < min) min = dist;
 
       // Increase the final spot by 1, normalise upward.
@@ -76,3 +77,22 @@ public class Permutations{
     System.out.println("Minimum: "+fastestTime(matrix));
   }
 }
+
+/**
+Figured I should explain this
+
+if we envision the matrix as a grid and consider a given distance:
+- the row represents where we're coming from
+- the column represents where we're going to
+
+as we continue, we know that the previous column must become the past row.
+
+this means that we can make map out all of the possible paths by just
+mapping out where we're going to next and make sure we're not repeating any locations
+- blockedCol<> blocks past locations
+- xChain<> maps everything out
+
+we need to test all possible variants of xChain.
+
+to see this in action, uncomment the print statement above where
+i compare dist to min and run.
