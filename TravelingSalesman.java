@@ -33,10 +33,10 @@ public class TravelingSalesman{
     for (int i = 0; i < cities.size() ; i++) {integerPaths.add(i);}
     for (int i = 0; i < 6 * factorial(cities.size()) ; i ++)
     {
-      Collections.shuffle(cities);
+      Collections.shuffle(integerPaths);
       shortestPath = Math.min(shortestPath, totalDistance(integerPaths, distances));
     }
-
+    System.out.println(shortestPath);
   }
   public static int totalDistance(ArrayList<Integer> citys, int[][] distance)
   {
@@ -47,7 +47,7 @@ public class TravelingSalesman{
     }
     return out;
   }
-  public static int factorial (int n)
+  public static int factorial(int n)
   {
     int out = 1;
     for (int i = 1;i <= n ; i ++ )
